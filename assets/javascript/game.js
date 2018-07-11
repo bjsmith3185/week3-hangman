@@ -4,6 +4,10 @@ $(document).ready(function () {
     $(".container-start").show();
     $(".container-game").hide();
     $(".container-correct").hide();
+    $(".container-loss").hide();
+
+
+    
 
     var win = 0;
     var loss = 0;
@@ -22,6 +26,13 @@ $(document).ready(function () {
 
 
     function selectWord() {
+
+        $(".container-start").hide();
+        $(".container-game").show();
+        $(".container-correct").hide();
+        $(".container-loss").hide();
+        $(".letters-guessed").text('');
+
         wordFromArray;
         lengthOfWord = 0;
         wordArrayCheck = [];
@@ -32,12 +43,9 @@ $(document).ready(function () {
         guessesRemaining = 9;
         alreadyGuessesArray = [];
         guessAgain = false;
+       
 
-        $("#start-button").on("click", function() {
-            $(".container-start").hide();
-            $(".container-game").show();
-            $(".container-correct").hide();
-        });
+       
 
 
 
@@ -55,10 +63,43 @@ $(document).ready(function () {
         $(".display-results").text(displayArray.join(" "));
         $(".win").text("Wins = " + win);
         $(".loss").text("Losses = " + loss);
-        $(".guess-remaining").text("Guesses Remaining = " + guessesRemaining);
+        $(".guess-remaining").text("Guesses left = " + guessesRemaining);
     };
 
-    selectWord();
+    $("#start-button").on("click", function() {
+        $(".container-start").hide();
+        $(".container-game").show();
+        $(".container-correct").hide();
+        $(".container-loss").hide();
+        selectWord();
+    });
+
+    function scrollLeft() {
+        var count = 1;
+        setInterval(nextImage, 800);
+        function nextImage() {
+            $(".image-left").attr('src', 'assets/images/topping' + count + '.JPG');
+            count++;
+            if (count === 9) {
+              count = 1;
+            }
+        };
+    };
+    scrollLeft();
+
+    function scrollRight() {
+        var count = 9;
+        setInterval(nextImage, 800);
+        function nextImage() {
+            $(".image-right").attr('src', 'assets/images/topping' + count + '.JPG');
+            count--;
+            if (count === 1) {
+              count = 9;
+            }
+        };
+    };
+    scrollRight();
+
 
     $(document).on('keypress', function (e) {
         var letterPicked = e.key.toLowerCase();
@@ -102,8 +143,13 @@ $(document).ready(function () {
                             gameOver = true;
                             loss++;
                             $(".loss").text("Losses = " + loss);
-                            alert("game is over");
-                            selectWord();
+
+                            $(".container-start").hide();
+                            $(".container-game").hide();
+                            $(".container-correct").hide();
+                            $(".container-loss").show();
+                            // alert("game is over");
+                            // selectWord();
                         };
 
                     } else {
@@ -120,7 +166,14 @@ $(document).ready(function () {
                             gameOver = true;
                             win++;
                             $(".win").text("Wins = " + win);
-                            selectWord();
+
+                            $(".container-start").hide();
+                            $(".container-game").hide();
+                            $(".container-correct").show();
+                            $(".container-loss").hide();
+
+
+                            // selectWord();
                         };
                     };
 
@@ -129,6 +182,14 @@ $(document).ready(function () {
             };
         };
 
+    });
+
+    $("#reset").on("click", function() {
+        selectWord()
+    });
+
+    $("#reset2").on("click", function() {
+        selectWord()
     });
 
 });

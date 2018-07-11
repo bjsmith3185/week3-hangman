@@ -11,7 +11,7 @@
 </head>
 <body class="start-background">
 
-<div class="wrapper">
+
     <div class="container container-start">
         <div class="row">
             <div class="col-xs-12">
@@ -35,8 +35,24 @@
 
     <div class="container container-game">
         <div class="row">
+            <div class="col-xs-2">
+                <div class="image-left-area text-center">
+                    <img class="image image-left" src="assets/images/cheese.jpg">
+                </div>
+            </div>
+            <div class="col-xs-8">
+                <h2 class="text-center game-title">Guess the burger topping!</h2>
+                
+            </div>
+            <div class="col-xs-2">
+                <div class="image-right-area text-center">
+                    <img class="image image-right" src="assets/images/onion.jpg">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
             <div class="col-xs-12">
-                <h2 class="text-center game-title">Try to guess the burger topping!</h2>
                 <div class="display-results text-center"></div>
             </div>
         </div>
@@ -44,7 +60,7 @@
         <div class="row">
             <div class="col-xs-4"><div class="win text-center info-box">win</div></div>
             <div class="col-xs-4"><div class="loss text-center info-box">loss</div></div>
-            <div class="col-xs-4"><div class="guess-remaining text-center info-box">guesses remianing</div></div>
+            <div class="col-xs-4"><div class="guess-remaining text-center info-box">guesses left</div></div>
         </div>
         <div class="row">
             <div class="col-xs-2"></div>
@@ -52,7 +68,7 @@
                 <div class="letters-guessed-title text-center">Letters Guessed</div>
                 <div class="letters-guessed text-center"></div>
             </div>
-
+        </div>
     </div>
 
     <div class="container container-correct">
@@ -63,13 +79,34 @@
                     <h2 class="correct-title">Great Job!</h2>
                     <img class="correct-img" src="" />
                 </div>
+                <div class="next-word-area text-center">
+                    <button class="btn btn-warning reset" id="reset">Next Word</button>
+                </div>
             </div>
+        </div>
+    </div>
+   
+
+
+    <div class="container container-loss">
+        <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-6">
+                <div class="correct-area">
+                    <h2 class="correct-title">Do you even know how to read?</h2>
+                    <img class="correct-img" src="" />
+                </div>
+                <div class="next-word-area text-center">
+                    <button class="btn btn-warning reset" id="reset2">Next Word</button>
+                </div>
             </div>
         </div>
     </div>
 
+
+
     
-</div>
+
 
 
 
