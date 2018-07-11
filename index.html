@@ -9,9 +9,72 @@
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css' integrity='sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp' crossorigin='anonymous'>
     <link rel='stylesheet' href='assets/css/style.css'>
 </head>
-<body>
+<body class="start-background">
 
-    <div class="container">
+<div class="wrapper">
+    <div class="container container-start">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="title text-center">Lets play guess the word.</h1>
+                <h2 class="title-2 text-center">Burger Topping Edition!</h2>
+                <div class="row">
+                    <div class="col-xs-3"></div>
+                    <div class="col-xs-6">
+                        <div class="start-images-area text-center">
+                            <img class="start-images " src="assets/images/burger.jpg" />
+                        </div>
+                    </div>
+                </div>
+                <div class="begin-area text-center">
+                    <button class="btn btn-lg" id="start-button"><span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>   Click to Begin.</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="container container-game">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-center game-title">Try to guess the burger topping!</h2>
+                <div class="display-results text-center"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-4"><div class="win text-center info-box">win</div></div>
+            <div class="col-xs-4"><div class="loss text-center info-box">loss</div></div>
+            <div class="col-xs-4"><div class="guess-remaining text-center info-box">guesses remianing</div></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2"></div>
+            <div class="col-xs-8">
+                <div class="letters-guessed-title text-center">Letters Guessed</div>
+                <div class="letters-guessed text-center"></div>
+            </div>
+
+    </div>
+
+    <div class="container container-correct">
+        <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-6">
+                <div class="correct-area">
+                    <h2 class="correct-title">Great Job!</h2>
+                    <img class="correct-img" src="" />
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+
+
+
+    <!-- <div class="container">
         <div class="jumbotron">
             <h1> Press a letter to get started!</h1>
         </div>
@@ -38,7 +101,7 @@
                 <div class="wrong-guess">wrong guess</div>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
