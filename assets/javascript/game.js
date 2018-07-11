@@ -78,7 +78,7 @@ $(document).ready(function () {
         var count = 1;
         setInterval(nextImage, 800);
         function nextImage() {
-            $(".image-left").attr('src', 'assets/images/topping' + count + '.JPG');
+            $(".image-left").attr('src', 'assets/images/topping' + count + '.jpg');
             count++;
             if (count === 9) {
               count = 1;
@@ -91,7 +91,7 @@ $(document).ready(function () {
         var count = 9;
         setInterval(nextImage, 800);
         function nextImage() {
-            $(".image-right").attr('src', 'assets/images/topping' + count + '.JPG');
+            $(".image-right").attr('src', 'assets/images/topping' + count + '.jpg');
             count--;
             if (count === 1) {
               count = 9;
