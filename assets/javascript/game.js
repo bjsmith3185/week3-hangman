@@ -76,7 +76,7 @@ $(document).ready(function () {
 
     function scrollLeft() {
         var count = 1;
-        setInterval(nextImage, 800);
+        setInterval(nextImage, 1200);
         function nextImage() {
             $(".image-left").attr('src', 'assets/images/topping' + count + '.jpg');
             count++;
@@ -89,7 +89,7 @@ $(document).ready(function () {
 
     function scrollRight() {
         var count = 9;
-        setInterval(nextImage, 800);
+        setInterval(nextImage,1200);
         function nextImage() {
             $(".image-right").attr('src', 'assets/images/topping' + count + '.jpg');
             count--;
